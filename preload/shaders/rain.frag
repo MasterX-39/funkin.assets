@@ -139,7 +139,7 @@ uniform bool uSpriteMode;
 
 uniform vec3 uRainColor;
 
-const int MAX_LIGHTS = 8;
+const int MAX_LIGHTS = 4;
 UNIFORM Light lights[MAX_LIGHTS];
 
 float rand(vec2 a) {
@@ -186,7 +186,7 @@ float rippleHeight(vec2 p, vec2 pos, float age, float size, float modSize, float
 vec2 puddleDisplace(vec2 p, float intensity) {
 	vec2 res = vec2(0);
 
-	const int numRipples = 30;
+	const int numRipples = 15;
 	const float rippleLife = 0.8;
 	const float rippleSize = 100.0;
 	const float rippleMod = rippleSize * 2.0;
@@ -241,7 +241,7 @@ void main() {
 	vec3 add = vec3(0);
 	float rainSum = 0.0;
 
-	const int numLayers = 4;
+	const int numLayers = 2;
 	float scales[4];
 	scales[0] = 1.0;
 	scales[1] = 1.8;
